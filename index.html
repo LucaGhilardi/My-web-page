@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Side Navigation Bar</title>
+	<link rel="stylesheet" href="styles1.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar">
+        <h2><img src="Images/Profilo-scont.svg" alt="Profile pic" style=width:100px></h2>
+        <ul>
+          <li><a href="#Home"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="#Profile"><i class="fas fa-user"></i>Profile</a></li>
+          <li><a href="#About"><i class="fas fa-address-card"></i>About</a></li>
+          <li><a href="#Contact"><i class="fas fa-address-book"></i>Contact me</a></li>
+          <li style="visibility: hidden;"><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>                     
+        </ul> 
+        <div class="social_media">
+          <a href="https://www.facebook.com/luca.ghilardi.7902"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/hdi_luca"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/lucahdi/"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/LucaGhilardi"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+    <div class="main_content">
+      <section id="Home">  
+        <h1>
+          <section>
+            <p class="text">
+              H<!--This comment is required to remove whitespace created by inline-block elements.
+           --><span>
+                  <span class="stack bouncing">.</span>
+                  <span class="stack">ı</span>
+              </span><!--This comment is required to remove whitespace created by inline-block elements.
+           -->, I'm Luca <br> a web developer student.
+            </p>
+          </section>
+        </h1>
+      </section>
+      
+      <section id="Profile">
+        <h1>Profile</h1>
+        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, quis!</p>
+      </section>
+
+      <section id="About">
+        <div class= "Education"><i class="fas fa-graduation-cap"></i> Education <hr><br>
+        <ul>
+          <li>Ca Foscari University of Venice - Ba in Middle estern language and culture.</li><br>
+          <li>ASERI Graduate School - Master in International Cooperation and Development.</li><br>
+          <li>Start2Impact - Full stack web development</li>
+        </ul>
+        </div> <br>
+        <div class= "Skills">Skills <hr>
+          <div class="skill-list">
+
+          <ul><i class="fas fa-file-code"></i> <b>Hard skills</b><br><br>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+            <li>Jquery</li>            
+          </ul>
+          
+          <ul><i class="far fa-user"></i> <b>Soft skills</b><br><br>
+            <li>Detail oriented</li>
+            <li>Multitasking</li>
+            <li>Problem-solving</li>
+            <li>Self-motivated</li>
+          </ul>
+                  
+         
+          </div>
+        </div>
+      </section>
+
+      <section id="Contact">
+        <form name="formmail" method="POST" action="mailto:luca.ghilardi11@gmail.com">
+                 
+          <label for="nome">Name</label>
+          <input type="text" id="nome" name="nome" placeholder="Please, insert your name">
+        
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" placeholder="Please, insert your e-mail address">
+                       
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" placeholder="Please, write your message"></textarea>
+        
+          <input type="submit" value="Submit">
+        
+        </form>
+      </section>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="smtscrll.js"></script>
+</body>
+</html>
