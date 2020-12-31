@@ -13,7 +13,7 @@ body{
    background-color: #f3f5f9;
 }
 
-img{border-radius: 40%;}    /*eliminare in caso di foto scontornata*/
+
 
 .wrapper{
   display: flex;
@@ -27,12 +27,12 @@ img{border-radius: 40%;}    /*eliminare in caso di foto scontornata*/
 .wrapper .sidebar{
   width: 200px;
   height: 100%;
-  background: #4b4276;
+  background: rgb(188, 188, 226);
   padding: 30px 0px;
   position: fixed;
 }
 
-.wrapper .sidebar h2{        /*eliminare*/
+.wrapper .sidebar h2{  
   color: #fff;
   text-transform: uppercase;
   text-align: center;
@@ -56,7 +56,7 @@ img{border-radius: 40%;}    /*eliminare in caso di foto scontornata*/
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: #594f8d;
+  background-color: rgb(188, 188, 226);
 }
     
 .wrapper .sidebar ul li:hover a{
@@ -74,7 +74,7 @@ img{border-radius: 40%;}    /*eliminare in caso di foto scontornata*/
 .wrapper .sidebar .social_media a{
   display: block;
   width: 40px;
-  background: #594f8d;
+  background: rgb(188, 188, 226);
   height: 40px;
   line-height: 45px;
   text-align: center;
@@ -86,7 +86,7 @@ img{border-radius: 40%;}    /*eliminare in caso di foto scontornata*/
 
 .wrapper .sidebar .social_media a:hover {
   color: #fff;
-  background-color: #594f8d;
+  background-color: rgb(188, 188, 226);
 }
 
 .wrapper .main_content{
@@ -182,22 +182,95 @@ input[type=text], textarea {
   text-align: center;
 }
 
+/*eliminare in caso di foto scontornata*/
+img{border-radius: 50%;
+width: auto;
+height: auto;
+max-width: 200px;
+max-height: 200px;
+}    
 
-input[type=submit] {
-  background-color:  #594f8d;
-  color: black;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
 
-input[type=submit]:hover {
-  background-color:  #594f8d;
-  color: white;
-}
 
 .skill-list  ul {display: inline-block;
 text-align: left ;
 padding: 10px;
 }
+
+/*dimensioni della card*/
+.maincontainer{ position: relative;
+  width: 400px;
+  height: 300px;
+  }
+  /*contenitore di entrambe le facce e controllo hover*/
+.thecard {position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d; /*sovrappone le due facce quando ruota*/
+  transition: all 1s ease;
+  
+  }
+  
+.thecard:hover {transform: rotateY(180deg);}
+  
+.thefront {position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /*se non hidden conflitto con preserve-3d*/
+  background:rgb(188, 188, 226);
+  color: black;
+  text-align: left;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: #717171 5px 10px 18px;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 20px;
+font-size: 150%;}
+  
+.theback {position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: rgb(188, 188, 226);
+  color: black;
+  transform:rotateY(180deg);
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid grey;
+  box-shadow: #717171 5px 10px 18px;
+  font-size: 10px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 20px;}
+
+.thefront p {font-size:  15px;
+}
+
+
+.theback ul {display: block;
+  position: relative;
+  border-left: 3px solid black;
+   
+}
+
+.theback ul li{ text-align: left;
+font-size: 20px;
+padding: 10px;}
+
+.theback ul li a{
+  color: black; 
+}
+
+.theback ul li a:hover{
+  color: white;
+}
+.theback ul li a .fas{
+  font-size: 30px;
+}
+.theback ul li a .fab{
+  font-size: 30px; 
+}
+
+
+
